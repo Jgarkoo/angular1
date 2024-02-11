@@ -1,0 +1,27 @@
+<div id="conteiner">
+    <div class="tdl">
+        To Do List
+    </div>
+    <div class="list">
+        <input type="text" class="email" placeholder="Enter task" name="task" [(ngModel)]="addTaskValue">
+        <button class="btn" type="button" (click)="addTask()">+</button>
+    </div>    
+    <h1 style=" color: rgb(108, 167, 255);">
+        Tasks : 
+    </h1>
+    <div class="cnt2" *ngFor="let task of taskArr">  
+        <div class="tasks">
+            <h2 style="font-size: 16px; margin-left: 15px; color: rgb(87, 87, 87); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                {{task.task_name}}
+            </h2>
+            <div>
+                <button class="btn2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" routerLink="./edit" routerLinkActive="active">
+                    e 
+                </button>
+                <button class="btn3" (click)="deleteTask(task)">
+                    x
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

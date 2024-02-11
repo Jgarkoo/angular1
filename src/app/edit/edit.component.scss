@@ -1,0 +1,16 @@
+.btn{
+    border-style: solid;
+    cursor: pointer;
+    color: green;
+    border-color: green;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px 15px;
+}
+
+.btn:hover{
+    background-color: green;
+    color: white;
+    border-color: green;
+    transition: 0.3s;
+}
